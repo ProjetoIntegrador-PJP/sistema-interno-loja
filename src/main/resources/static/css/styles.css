@@ -20,7 +20,6 @@ footer {
 }
 #aba-vendas {
     display: flex;
-   
 }
 
 #aba-venda {
@@ -29,9 +28,9 @@ footer {
 }
 
 #botoes {
-   border: 1px solid brown;
-   width: 10%;
-   
+    border: 1px solid brown;
+    width: 10%;
+
 }
 
 nav {
@@ -39,4 +38,8 @@ nav {
     background-color: aquamarine;
     padding: 10px;
     text-align: center;
+}
+
+section.active {
+    display: block !important;
 }
