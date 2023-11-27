@@ -1,33 +1,81 @@
 package com.senac.projetointegrador.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name ="cliente")
 public class Cliente {
-    
+	
+    @Id
+    @Column(name="cpf")
     private String cpf;
+    
+	@Column(name="nome")
     private String nomeCliente;
+	
+	@Column(name="cep")
+	private String cep;
+	
+	@Column(name="endereco")
     private String endereco;
+	
+	@Column(name="numero")
     private Integer numero;
+	
+	@Column(name="complemento")
     private String complemento;
+	
+	@Column(name="bairro")
     private String bairro;
+	
+	@Column(name="cidade")
     private String cidade;
+	
+	@Column(name="uf")
+	private String uf;
+	
+	@Column(name="email")
     private String email;
+	
+	@Column(name="data_nasc")
     private String dataNascimento;
+	
+	@Column(name="sexo")
     private Character sexo;
 
-    public Cliente(String cpf, String nomeCliente, String endereco, Integer numero, String complemento, String bairro,
-            String cidade, String email, String dataNascimento, Character sexo) {
+    public Cliente(String cpf, String nomeCliente, String cep, String endereco, Integer numero, String complemento, String bairro,
+            String cidade, String uf, String email, String dataNascimento, Character sexo) {
         this.cpf = cpf;
         this.nomeCliente = nomeCliente;
+        this.cep = cep;
         this.endereco = endereco;
         this.numero = numero;
         this.complemento = complemento;
         this.bairro = bairro;
         this.cidade = cidade;
+        this.uf = uf;
         this.email = email;
         this.dataNascimento = dataNascimento;
         this.sexo = sexo;
     }
 
-    public String getCpf() {
+    public Cliente() {
+    	
+    }
+    public String getCep() {
+		return cep;
+	}
+
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+
+	public String getCpf() {
         return cpf;
     }
     public void setCpf(String cpf) {

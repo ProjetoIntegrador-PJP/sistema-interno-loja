@@ -1,9 +1,25 @@
 package com.senac.projetointegrador.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "produtos")
 public class Produto {
+	
+	@Id
+	@Column(name="referencia")
     private Integer referencia;
+	
+	@Column(name="nome")
     private String nomeProduto;
+	
+	@Column(name="preco")
     private Double preco;
+	
+	@Column(name="quantidade")
     private Integer quantidade;
 
     public Produto(Integer referencia, String nomeProduto, Double preco, Integer quantidade) {
@@ -11,6 +27,10 @@ public class Produto {
         this.nomeProduto = nomeProduto;
         this.preco = preco;
         this.quantidade = quantidade;
+    }
+    
+    public Produto() {
+    	
     }
     
     public Integer getReferencia() {
